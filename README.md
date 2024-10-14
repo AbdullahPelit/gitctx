@@ -15,7 +15,7 @@
 Öncelikle, `gitctx` aracını indirmeniz gerekmektedir. Bunun için aşağıdaki komutu kullanarak depoyu klonlayın:
 
 ```bash
-git clone https://github.com/yourusername/gitctx.git
+git clone https://github.com/AbdullahPelit/gitctx.git
 cd gitctx
 ```
 

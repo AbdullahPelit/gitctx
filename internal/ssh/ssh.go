@@ -9,9 +9,6 @@ import (
 	"strings"
 )
 
-// SSH key directory
-const sshDir = "/Users/abdullahpelit/.ssh"
-
 // SwitchSSHKey switches the active SSH key
 func SwitchSSHKey(account string) error {
 	configFile := filepath.Join(os.Getenv("HOME"), ".gitctx_config")
@@ -87,6 +84,7 @@ Host github.com
 
 // RemoveSSHKey removes the SSH key for the specified account
 func RemoveSSHKey(account string) error {
+	sshDir := filepath.Join(os.Getenv("HOME"), ".ssh")
 	sshKeyPath := filepath.Join(sshDir, fmt.Sprintf("id_rsa_%s", account))
 
 	if _, err := os.Stat(sshKeyPath); os.IsNotExist(err) {
