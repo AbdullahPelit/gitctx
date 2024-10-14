@@ -4,9 +4,10 @@
 
 ## Özellikler
 
-- SSH anahtarı oluşturma ve otomatik olarak ekrana yazdırma
-- Hesap ekleme, silme ve geçiş yapma
-- Konfigürasyon dosyasına kayıtlı hesapları listeleme
+- Hesaplar için ayrı ayrı SSH anahtarı oluşturma ve yönetme
+- Hesaplar arasında hızlı geçiş
+- Kayıtlı hesapları listeleme
+- Hesap ekleme ve silme
 
 ## Kurulum
 
@@ -19,34 +20,34 @@ git clone https://github.com/AbdullahPelit/gitctx.git
 cd gitctx
 ```
 
-### 2. Script'i Çalıştırılabilir Hale Getirin
+### 2. Bağımlılıkları Kurun
 
-Script'in çalıştırılabilir olması için gerekli izinleri verin:
-
-```bash
-chmod +x gitctx.sh
-```
-
-### 3. Script'i PATH'e Ekleyin
-
-Script'i sistem PATH'ine ekleyerek her yerden kullanılabilir hale getirin. Bunun için script'i ~/bin/ dizinine taşıyabilir ve PATH'e ekleyebilirsiniz:
+Proje cobra paketini kullanmaktadır. Bağımlılıkları yüklemek için terminalde şu komutu çalıştırın:
 
 ```bash
-mv gitctx.sh ~/bin/gitctx
+go mod tidy
 ```
 
-Eğer ~/bin/ dizini yoksa, oluşturabilirsiniz:
+### 3. Projeyi Derleyin (Build)
+
+Projenin çalışabilir bir versiyonunu oluşturmak için aşağıdaki komutu kullanarak projeyi derleyebilirsiniz:
 
 ```bash
-mkdir -p ~/bin
-mv gitctx.sh ~/bin/gitctx
+go build -o gitctx
+```
+### 4. gitctx'i PATH'e Ekleyin
+
+gitctx komutunu her yerden kullanabilmek için çalıştırılabilir dosyayı sistemin PATH'ine ekleyin. Bunun için:
+
+```bash
+mv gitctx ~/bin/
 ```
 
-Ardından, bu dizini PATH'e eklemek için aşağıdaki satırı ~/.bashrc veya ~/.zshrc dosyanıza ekleyin:
+Ardından, bu dizini PATH'e eklemek için ~/.bashrc, ~/.zshrc veya terminalde kullanılan kabuğa uygun dosyaya şu satırı ekleyin:
 
 ```bash
 export PATH=$PATH:~/bin
-source ~/.bashrc
+source ~/.bashrc  # veya ~/.zshrc kullanıyorsanız bu komutu çalıştırın
 ```
 
 ## Kullanım
@@ -66,7 +67,7 @@ Bu komut, size yeni bir SSH anahtarı oluşturma veya mevcut bir anahtarı kulla
 Mevcut bir hesabı silmek için:
 
 ```bash
-gitctx remove
+gitctx remove <account_name>
 ```
 
 ### Hesaplar Arasında Geçiş Yapma
