@@ -1,9 +1,9 @@
 package main
 
 import (
-    "gitctx/cmd"
+	"gitctx/cmd"
 )
 
 func main() {
-    cmd.Execute()
+	cmd.Execute()
 }
