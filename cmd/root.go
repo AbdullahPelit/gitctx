@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	version     = "1.0.0" // Versiyon numarası
+	version     = "1.0.1" // Versiyon numarası
 	versionFlag bool
 )
 

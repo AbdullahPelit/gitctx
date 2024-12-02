@@ -28,7 +28,7 @@ If applicable, add screenshots to help explain your problem.
 **Environment:**
 - OS: [e.g., Windows 10, macOS 12.0]
 - Go Version: [e.g., 1.17]
-- Project Version: [e.g., v1.0.0]
+- Project Version: [e.g., v1.0.1]
 
 **Additional Context**
 Add any other context about the problem here.
