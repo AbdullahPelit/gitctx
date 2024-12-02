@@ -1,0 +1,62 @@
+# Binary dosyaları
+gitctx
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary'leri
+*.test
+
+# Go coverage sonuçları
+*.out
+*.prof
+coverage.html
+
+# IDE ve editör dosyaları
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Go spesifik
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+
+# Debug dosyaları
+debug/
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Local development config
+.env
+.env.local
+*.local.yml
+*.local.yaml
+
+# Log dosyaları
+*.log
+
+# Temporary directories
+tmp/
+temp/
+
+# User-specific files
+.gitctx_config
+.gitctx_current
+.gitctx_config.backup
+
+# Test coverage
+coverage/
+
+# System Files
+.DS_Store
+Thumbs.db 

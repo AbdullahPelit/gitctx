@@ -1,27 +1,51 @@
-# Katkı Kılavuzu
+# Contributing Guide
 
-Projeye katkıda bulunduğunuz için teşekkürler! İşte katkı yapmanın yolları ve süreçleri hakkında bazı yönergeler:
+Thank you for considering contributing to our project! Here are some guidelines about how you can help:
 
-## Nasıl Katkı Yapabilirsiniz?
+## How to Contribute
 
-1. Bir sorun (issue) rapor edebilir veya var olan bir sorun üzerinde çalışabilirsiniz.
-2. Yeni özellikler ekleyebilir veya mevcut olanları geliştirebilirsiniz.
-3. Hataları düzeltebilirsiniz.
+1. Report issues or work on existing ones
+2. Add new features or enhance existing ones
+3. Fix bugs
+4. Improve documentation
 
-## Kodlama Standartları
+## Development Setup
 
-- Kod yazarken `prettier` kullanarak kodunuzu formatlayın.
-- Değişiklik yapmadan önce lütfen projenin kod stili ile uyumlu olduğundan emin olun.
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/yourusername/gitctx.git`
+3. Install dependencies: `go mod tidy`
 
-## Pull Request Süreci
+## Coding Standards
 
-1. Geliştirmelerinizi kendi dalınızda (branch) yapın: `git checkout -b yeni-ozellik-adi`
-2. Değişiklikleri yapın ve commit'leyin: `git commit -m 'Özellik açıklaması'`
-3. Deponuza (repo) push'layın: `git push origin yeni-ozellik-adi`
-4. GitHub üzerinde bir pull request oluşturun ve değişikliklerinizi açıklayın.
+- Format your code using `gofmt`
+- Follow Go best practices and idioms
+- Write meaningful commit messages
+- Add comments for complex logic
+- Maintain test coverage
 
-## Testler
+## Pull Request Process
 
-Lütfen katkıda bulunmadan önce tüm testlerin geçtiğinden emin olun. Yeni özellikler ekliyorsanız, yeni testler de eklemeyi unutmayın. Test komutunu çalıştırmak için:
+1. Create a new branch for your feature: `git checkout -b feature-name`
+2. Make your changes and commit them: `git commit -m 'Description of changes'`
+3. Push to your fork: `git push origin feature-name`
+4. Open a Pull Request with a clear title and description
+5. Wait for review and address any feedback
+
+## Testing
+
+Please ensure all tests pass before submitting your contribution. If you're adding new features, include appropriate tests:
+
 ```bash
-npm test
+go test ./...
+```
+
+## Code Review
+
+- All submissions require review
+- We use GitHub pull requests for this purpose
+- Follow up on review comments and make requested changes
+- Be patient and respectful during the review process
+
+## License
+
+By contributing, you agree that your contributions will be licensed under the MIT License.

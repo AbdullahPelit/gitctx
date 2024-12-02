@@ -1,93 +1,94 @@
-# gitctx - GitHub/GitLab Hesap Yönetim Aracı
+# gitctx - GitHub/GitLab Account Management Tool
 
-`gitctx`, birden fazla GitHub veya GitLab hesabını kolayca yönetmenizi sağlayan bir araçtır. SSH anahtarlarını dinamik olarak oluşturabilir, hesaplar arasında geçiş yapabilir ve farklı hesaplar için ayrı SSH anahtarları kullanabilirsiniz.
+`gitctx` is a tool that allows you to easily manage multiple GitHub or GitLab accounts. You can dynamically generate SSH keys, switch between accounts, and use separate SSH keys for different accounts.
 
-## Özellikler
+## Features
 
-- Hesaplar için ayrı ayrı SSH anahtarı oluşturma ve yönetme
-- Hesaplar arasında hızlı geçiş
-- Kayıtlı hesapları listeleme
-- Hesap ekleme ve silme
+- Create and manage separate SSH keys for accounts
+- Quick switching between accounts
+- List registered accounts
+- Add and remove accounts
 
-## Kurulum
+## Installation
 
-### 1. Depoyu Klonlayın
+### 1. Clone the Repository
 
-Öncelikle, `gitctx` aracını indirmeniz gerekmektedir. Bunun için aşağıdaki komutu kullanarak depoyu klonlayın:
+First, you need to download the `gitctx` tool. Clone the repository using the following command:
 
 ```bash
 git clone https://github.com/AbdullahPelit/gitctx.git
 cd gitctx
 ```
 
-### 2. Bağımlılıkları Kurun
+### 2. Install Dependencies
 
-Proje cobra paketini kullanmaktadır. Bağımlılıkları yüklemek için terminalde şu komutu çalıştırın:
+The project uses the cobra package. Run the following command in the terminal to install dependencies:
 
 ```bash
 go mod tidy
 ```
 
-### 3. Projeyi Derleyin (Build)
+### 3. Build the Project
 
-Projenin çalışabilir bir versiyonunu oluşturmak için aşağıdaki komutu kullanarak projeyi derleyebilirsiniz:
+You can build an executable version of the project using the following command:
 
 ```bash
 go build -o gitctx
 ```
-### 4. gitctx'i PATH'e Ekleyin
 
-gitctx komutunu her yerden kullanabilmek için çalıştırılabilir dosyayı sistemin PATH'ine ekleyin. Bunun için:
+### 4. Add gitctx to PATH
+
+To use the gitctx command from anywhere, add the executable to your system's PATH. To do this:
 
 ```bash
 mv gitctx ~/bin/
 ```
 
-Ardından, bu dizini PATH'e eklemek için ~/.bashrc, ~/.zshrc veya terminalde kullanılan kabuğa uygun dosyaya şu satırı ekleyin:
+Then, add this directory to PATH by adding the following line to ~/.bashrc, ~/.zshrc, or the appropriate shell configuration file:
 
 ```bash
 export PATH=$PATH:~/bin
-source ~/.bashrc  # veya ~/.zshrc kullanıyorsanız bu komutu çalıştırın
+source ~/.bashrc  # or run this command if you're using ~/.zshrc
 ```
 
-## Kullanım
+## Usage
 
-### Hesap Ekleme
+### Adding an Account
 
-Yeni bir hesap eklemek için:
+To add a new account:
 
 ```bash
 gitctx add
 ```
 
-Bu komut, size yeni bir SSH anahtarı oluşturma veya mevcut bir anahtarı kullanma seçeneği sunar. Yeni bir SSH anahtarı oluşturursanız, bu anahtarı Git provider'ınıza (GitHub, GitLab, vb.) eklemeniz gerekir. SSH anahtarı ekrana yazdırılacaktır.
+This command gives you the option to create a new SSH key or use an existing one. If you create a new SSH key, you'll need to add it to your Git provider (GitHub, GitLab, etc.). The SSH key will be printed to the screen.
 
-### Hesap Silme
+### Removing an Account
 
-Mevcut bir hesabı silmek için:
+To remove an existing account:
 
 ```bash
 gitctx remove <account_name>
 ```
 
-### Hesaplar Arasında Geçiş Yapma
+### Switching Between Accounts
 
-Eklediğiniz hesaplar arasında geçiş yapmak için:
+To switch between added accounts:
 
 ```bash
 gitctx switch <account_name>
 ```
 
-### Hesapları Listeleme
+### Listing Accounts
 
-Kayıtlı tüm hesapları listelemek için:
+To list all registered accounts:
 
 ```bash
 gitctx list
 ```
 
-# Katkıda Bulunma
-Katkıda bulunmak isterseniz, lütfen bir fork yapın ve pull request gönderin. Her türlü katkıya açığız!
+## Contributing
+If you'd like to contribute, please fork the repository and submit a pull request. We're open to all kinds of contributions!
 
 
 

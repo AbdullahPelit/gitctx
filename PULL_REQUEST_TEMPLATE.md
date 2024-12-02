@@ -1,20 +1,40 @@
 ---
 name: Pull Request
-about: Projeye yeni özellik eklemek veya hata düzeltmek için bir pull request gönderin.
-title: "[Özellik/Hata] Yaptığınız değişikliğin kısa açıklaması"
+about: Submit a pull request to add features or fix bugs
+title: "[Feature/Fix] Brief description of changes"
 labels: enhancement, bug
 assignees: ''
 
 ---
 
-**Yapılan Değişiklikler**
-Bu pull request neleri değiştiriyor? Kısa ve net bir açıklama yapın.
+## Description
+Please provide a clear description of the changes in this PR.
 
-**Nasıl Test Edilir?**
-Değişikliklerinizi nasıl test ettiniz? Adım adım test senaryolarını açıklayın.
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Documentation update
+- [ ] Code refactoring
+- [ ] Other (please describe)
 
-**İlgili Sorunlar**
-Bu pull request hangi sorunları (issue) kapatıyor? Sorun numaralarını belirtin.
+## Testing
+Describe the tests you ran and how to reproduce them:
 
-**Ek Notlar**
-Bu değişiklikle ilgili başka ek bilgiler.
+1. Step 1...
+2. Step 2...
+3. Step 3...
+
+## Related Issues
+Fixes #(issue number)
+
+## Checklist
+- [ ] My code follows the project's style guidelines
+- [ ] I have performed a self-review of my code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+
+## Additional Notes
+Any additional information that reviewers should know about this PR.
